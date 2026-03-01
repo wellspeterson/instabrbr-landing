@@ -695,7 +695,7 @@ export default function LandingPage() {
 
       {/* MODAL */}
       {modalOpen && (
-        <div onClick={(e)=>{ if(e.target===e.currentTarget) setModalOpen(false); }} style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999, padding:24 }}>
+        <div onClick={(e)=>{ if(e.target===e.currentTarget) setModalOpen(false); }} style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", backdropFilter:"blur(12px)", WebkitBackdropFilter:"blur(12px)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999, padding:24 }}>
           <div style={{ background:"#141920", borderRadius:20, padding:"36px 32px", maxWidth:420, width:"100%", boxShadow:"0 32px 80px rgba(0,0,0,0.15)" }}>
             {submitted ? (
               <div style={{ textAlign:"center" }}>
