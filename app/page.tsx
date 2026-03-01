@@ -542,11 +542,10 @@ export default function LandingPage() {
           <div style={{ display:"flex", flexDirection:"column", gap:0 }}>
             {[
               "Scheduling chaos.",
-              "Messages get buried.",
-              "Clients ghost you.",
-              "Your income feels random.",
+              "Clients ghosting you.",
+              "Unpredictable income.",
             ].map((line, i) => (
-              <div key={i} style={{ padding:"36px 0", borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.08)" : "none" }}>
+              <div key={i} style={{ padding:"36px 0", borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none" }}>
                 <p style={{ fontSize:"clamp(22px, 3.5vw, 34px)", fontWeight:800, color:"#F0F4F8", letterSpacing:-0.5, margin:0 }}>
                   {line}
                 </p>
