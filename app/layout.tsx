@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   title: "instabrbr",
   description: "Turn DMs into confirmed, paid bookings.",
   openGraph: {
-    title: "instabrbr",
     description: "Turn DMs into confirmed, paid bookings.",
     url: "https://instabrbr.com",
     siteName: "instabrbr",
@@ -25,7 +24,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "instabrbr",
     description: "Turn DMs into confirmed, paid bookings.",
   },
 }

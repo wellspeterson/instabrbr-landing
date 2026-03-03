@@ -37,43 +37,37 @@ export default async function Image() {
           }}
         />
 
-        {/* Teal scissor icon */}
+        {/* Teal scissor icon — using path elements for Satori compatibility */}
         <svg
           width="120"
           height="120"
           viewBox="0 0 100 100"
-          fill="none"
         >
-          <line
-            x1="30"
-            y1="5"
-            x2="70"
-            y2="95"
+          {/* Two crossing blades */}
+          <path
+            d="M30 5 L70 95"
             stroke="#34C1D9"
             strokeWidth="7"
             strokeLinecap="round"
+            fill="none"
           />
-          <line
-            x1="70"
-            y1="5"
-            x2="30"
-            y2="95"
+          <path
+            d="M70 5 L30 95"
             stroke="#34C1D9"
             strokeWidth="7"
             strokeLinecap="round"
+            fill="none"
           />
-          <circle
-            cx="25"
-            cy="82"
-            r="13"
+          {/* Left finger hole */}
+          <path
+            d="M25 69 a13 13 0 1 0 0 26 a13 13 0 1 0 0-26"
             stroke="#34C1D9"
             strokeWidth="7"
             fill="none"
           />
-          <circle
-            cx="75"
-            cy="82"
-            r="13"
+          {/* Right finger hole */}
+          <path
+            d="M75 69 a13 13 0 1 0 0 26 a13 13 0 1 0 0-26"
             stroke="#34C1D9"
             strokeWidth="7"
             fill="none"
