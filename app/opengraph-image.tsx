@@ -2,15 +2,11 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Turn DMs into confirmed, paid bookings";
+export const alt = "instabrbr — Turn DMs into confirmed, paid bookings";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const geistFont = await fetch(
-    new URL("https://fonts.gstatic.com/s/geist/v1/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOI.woff")
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -22,7 +18,6 @@ export default async function Image() {
           alignItems: "center",
           justifyContent: "center",
           background: "#0B0F14",
-          fontFamily: "Geist",
         }}
       >
         {/* Top accent bar */}
@@ -37,75 +32,38 @@ export default async function Image() {
           }}
         />
 
-        {/* Scissor icon */}
-        <svg
-          width="120"
-          height="120"
-          viewBox="0 0 100 100"
-          fill="none"
+        {/* Scissors emoji as icon — no SVG rendering issues */}
+        <div style={{ fontSize: 96, display: "flex" }}>✂️</div>
+
+        {/* Brand */}
+        <div
+          style={{
+            marginTop: 24,
+            fontSize: 52,
+            fontWeight: 700,
+            color: "#34C1D9",
+            display: "flex",
+          }}
         >
-          <line
-            x1="30"
-            y1="5"
-            x2="70"
-            y2="95"
-            stroke="#34C1D9"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-          <line
-            x1="70"
-            y1="5"
-            x2="30"
-            y2="95"
-            stroke="#34C1D9"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-          <circle
-            cx="25"
-            cy="82"
-            r="13"
-            stroke="#34C1D9"
-            strokeWidth="7"
-            fill="none"
-          />
-          <circle
-            cx="75"
-            cy="82"
-            r="13"
-            stroke="#34C1D9"
-            strokeWidth="7"
-            fill="none"
-          />
-        </svg>
+          instabrbr
+        </div>
 
         {/* Tagline */}
         <div
           style={{
-            marginTop: 40,
-            fontSize: 42,
-            fontWeight: 600,
-            color: "#ffffff",
+            marginTop: 16,
+            fontSize: 36,
+            fontWeight: 400,
+            color: "#ffffffcc",
             textAlign: "center",
             maxWidth: 800,
-            lineHeight: 1.3,
+            display: "flex",
           }}
         >
           Turn DMs into confirmed, paid bookings
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [
-        {
-          name: "Geist",
-          data: geistFont,
-          style: "normal",
-          weight: 600,
-        },
-      ],
-    }
+    { ...size }
   );
 }
