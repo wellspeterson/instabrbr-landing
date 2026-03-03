@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "instabrbr",
-  description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
+  description: "Turn DMs into confirmed, paid bookings.",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "instabrbr",
-    description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
+    description: "Turn DMs into confirmed, paid bookings.",
     siteName: "instabrbr",
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "instabrbr",
-    description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
+    description: "Turn DMs into confirmed, paid bookings.",
   },
 };
 
