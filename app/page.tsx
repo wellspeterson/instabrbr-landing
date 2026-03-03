@@ -703,7 +703,7 @@ export default function LandingPage() {
                 <h3 style={{ fontSize:22, fontWeight:900, marginBottom:10 }}>Link reserved!</h3>
                 <p style={{ color:"#8B95A1", marginBottom:8 }}><strong style={{ color:BRAND }}>instabrbr.com/{slug}</strong> is yours.</p>
                 <p style={{ color:"#4B5563", fontSize:14 }}>We&apos;ll email you right before launch.</p>
-                <button onClick={()=>{ setModalOpen(false); setSubmitted(false); }} style={{ marginTop:24, padding:"12px 32px", background:BRAND, color:"#fff", border:"none", borderRadius:10, fontSize:15, fontWeight:700, cursor:"pointer" }}>Done</button>
+                <button onClick={()=>{ setModalOpen(false); setSubmitted(false); setEmail(""); setUsername(""); window.scrollTo({ top:0, behavior:"smooth" }); }} style={{ marginTop:24, padding:"12px 32px", background:BRAND, color:"#fff", border:"none", borderRadius:10, fontSize:15, fontWeight:700, cursor:"pointer" }}>Done</button>
               </div>
             ) : (
               <>
