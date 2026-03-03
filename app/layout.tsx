@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://instabrbr.com"),
-  title: "instabrbr",
+  title: "Turn DMs into confirmed, paid bookings",
   description: "Turn DMs into confirmed, paid bookings.",
   openGraph: {
-    title: "instabrbr",
+    title: "Turn DMs into confirmed, paid bookings",
     description: "Turn DMs into confirmed, paid bookings.",
     url: "https://instabrbr.com",
     siteName: "instabrbr",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "instabrbr",
+    title: "Turn DMs into confirmed, paid bookings",
     description: "Turn DMs into confirmed, paid bookings.",
   },
 }
