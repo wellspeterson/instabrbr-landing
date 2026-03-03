@@ -2,11 +2,15 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "instabrbr – Turn DMs into confirmed, paid bookings";
+export const alt = "Turn DMs into confirmed, paid bookings";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
+  const geistFont = await fetch(
+    new URL("https://fonts.gstatic.com/s/geist/v1/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOI.woff")
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
@@ -18,7 +22,7 @@ export default function Image() {
           alignItems: "center",
           justifyContent: "center",
           background: "#0B0F14",
-          fontFamily: "sans-serif",
+          fontFamily: "Geist",
         }}
       >
         {/* Top accent bar */}
@@ -90,20 +94,18 @@ export default function Image() {
         >
           Turn DMs into confirmed, paid bookings
         </div>
-
-        {/* URL */}
-        <div
-          style={{
-            marginTop: 24,
-            fontSize: 22,
-            color: "#34C1D9",
-            letterSpacing: 1,
-          }}
-        >
-          instabrbr.com
-        </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Geist",
+          data: geistFont,
+          style: "normal",
+          weight: 600,
+        },
+      ],
+    }
   );
 }
