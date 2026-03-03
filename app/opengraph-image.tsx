@@ -7,6 +7,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const geistFont = fetch(
+    new URL("./geist-latin.woff2", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
@@ -18,6 +22,7 @@ export default async function Image() {
           alignItems: "center",
           justifyContent: "center",
           background: "#0B0F14",
+          fontFamily: "Geist",
         }}
       >
         {/* Top accent bar */}
@@ -32,8 +37,48 @@ export default async function Image() {
           }}
         />
 
-        {/* Scissors emoji as icon — no SVG rendering issues */}
-        <div style={{ fontSize: 96, display: "flex" }}>✂️</div>
+        {/* Teal scissor icon */}
+        <svg
+          width="120"
+          height="120"
+          viewBox="0 0 100 100"
+          fill="none"
+        >
+          <line
+            x1="30"
+            y1="5"
+            x2="70"
+            y2="95"
+            stroke="#34C1D9"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <line
+            x1="70"
+            y1="5"
+            x2="30"
+            y2="95"
+            stroke="#34C1D9"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <circle
+            cx="25"
+            cy="82"
+            r="13"
+            stroke="#34C1D9"
+            strokeWidth="7"
+            fill="none"
+          />
+          <circle
+            cx="75"
+            cy="82"
+            r="13"
+            stroke="#34C1D9"
+            strokeWidth="7"
+            fill="none"
+          />
+        </svg>
 
         {/* Brand */}
         <div
@@ -64,6 +109,16 @@ export default async function Image() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Geist",
+          data: await geistFont,
+          style: "normal",
+          weight: 400,
+        },
+      ],
+    }
   );
 }
