@@ -12,10 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "instabrbr",
   description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
-}
+  icons: {
+    icon: "/favicon.ico?v=2",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/favicon.ico?v=2",
+  },
+  openGraph: {
+    title: "instabrbr",
+    description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
+    siteName: "instabrbr",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "instabrbr",
+    description: "Stop losing clients to no-shows. Turn DMs into confirmed, paid bookings.",
+  },
+};
 
 export default function RootLayout({
   children,
