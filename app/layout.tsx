@@ -28,11 +28,20 @@ export const metadata: Metadata = {
     description: "Turn DMs into confirmed, paid bookings.",
     siteName: "instabrbr",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "instabrbr - Turn DMs into confirmed, paid bookings.",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "instabrbr",
     description: "Turn DMs into confirmed, paid bookings.",
+    images: ["/og-image.png"],
   },
 };
 
