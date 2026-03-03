@@ -16,9 +16,12 @@ export const metadata: Metadata = {
   title: "instabrbr",
   description: "Turn DMs into confirmed, paid bookings.",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "instabrbr",
