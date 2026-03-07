@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "instabrbr",
   description: "Turn DMs into confirmed, paid bookings.",
   icons: {
-    icon: "/favicon.svg?v=2",
+    icon: "/favicon.svg?v=3",
   },
   openGraph: {
     description: "Turn DMs into confirmed, paid bookings.",
