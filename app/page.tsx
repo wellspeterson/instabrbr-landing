@@ -8,12 +8,7 @@ const GREY = "#F7F6F3";
 
 function ScissorLogo({ size = 28 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-      <line x1="30" y1="5" x2="70" y2="95" stroke={BRAND} strokeWidth="7" strokeLinecap="round"/>
-      <line x1="70" y1="5" x2="30" y2="95" stroke={BRAND} strokeWidth="7" strokeLinecap="round"/>
-      <circle cx="25" cy="82" r="13" stroke={BRAND} strokeWidth="7" fill="none"/>
-      <circle cx="75" cy="82" r="13" stroke={BRAND} strokeWidth="7" fill="none"/>
-    </svg>
+    <img src="/favicon.svg" alt="instabrbr scissors" width={size} height={size} />
   );
 }
 

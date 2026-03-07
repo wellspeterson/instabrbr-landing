@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://instabrbr.com"),
   title: "instabrbr",
   description: "Turn DMs into confirmed, paid bookings.",
+  icons: {
+    icon: "/favicon.svg?v=2",
+  },
   openGraph: {
     description: "Turn DMs into confirmed, paid bookings.",
     url: "https://instabrbr.com",
